@@ -55,5 +55,8 @@ jk.yml
   **View in Build Pipeline**
   ![Pic7](images/8.png)
   
+  ***Result***
+  ![Pic](images/9.png)
+  
   
  
