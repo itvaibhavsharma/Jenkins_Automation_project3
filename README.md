@@ -6,19 +6,54 @@ When we launch this image, it should automatically starts Jenkins service in the
 Create a job chain of job1, job2, job3 and  job4 using build pipeline plugin in Jenkins 
 
 ***Intitial Setup***
+**Setting Up Docker File**
+used to set up K8S in Jenkins docker image
+*for this we need files from kubes server
+-ca.crt
+-client.crt
+-client.key
+-config*
+
+**Editing config file** *editing file according to your system*
+![Pic2](/images/2.png)
+
+Use the docker file to make docker image
+
 ![Pic1](/images/1.png)
+
+docker build -t cos:v3 .
+
+docker run -it --name jenkins cos:v3
+
 **Job1 :** 
-  Pull  the Github repo automatically when some developers push repo to Github.
+
+![Pic3](image/3.png)
+
 **Job2 :**
   By looking at the code or program file, Jenkins should automatically start the respective language interpreter installed image container to deploy code on top of   Kubernetes ( eg. If code is of  PHP,then Jenkins should start the container that has PHP already installed )
   Expose your pod so that testing team could perform the testing on the pod
   Make the data to remain persistent ( If server collects some data like logs, other user information )
 
+Here we use jk.yml to deploy k8s cluster
+
+jk.yml
+![Pic6](image/4.png)
+![Pic4](image/5.png)
+
 **Job3 :** 
   Test your app if it  is working or not.
+  
+  ![Pic5](image/6.png)
+ 
 **Job4 :**
   if app is not working , then send email to developer with error messages and redeploy the application after code is being edited by the developer.
   
+  we use emailer to do this
+  
+  ![Pic6](image/7.png)
+  
+  **View in Build Pipeline**
+  ![Pic7](image/8.png)
   
   
  
