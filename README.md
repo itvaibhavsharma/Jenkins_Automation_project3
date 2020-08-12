@@ -27,7 +27,7 @@ docker run -it --name jenkins cos:v3
 
 **Job1 :** 
 
-![Pic3](image/3.png)
+![Pic3](images/3.png)
 
 **Job2 :**
   By looking at the code or program file, Jenkins should automatically start the respective language interpreter installed image container to deploy code on top of   Kubernetes ( eg. If code is of  PHP,then Jenkins should start the container that has PHP already installed )
@@ -37,23 +37,23 @@ docker run -it --name jenkins cos:v3
 Here we use jk.yml to deploy k8s cluster
 
 jk.yml
-![Pic6](image/4.png)
-![Pic4](image/5.png)
+![Pic6](images/4.png)
+![Pic4](images/5.png)
 
 **Job3 :** 
   Test your app if it  is working or not.
   
-  ![Pic5](image/6.png)
+  ![Pic5](images/6.png)
  
 **Job4 :**
   if app is not working , then send email to developer with error messages and redeploy the application after code is being edited by the developer.
   
   we use emailer to do this
   
-  ![Pic6](image/7.png)
+  ![Pic6](images/7.png)
   
   **View in Build Pipeline**
-  ![Pic7](image/8.png)
+  ![Pic7](images/8.png)
   
   
  
