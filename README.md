@@ -6,7 +6,7 @@ When we launch this image, it should automatically starts Jenkins service in the
 Create a job chain of job1, job2, job3 and  job4 using build pipeline plugin in Jenkins 
 
 ***Intitial Setup***
-![Pic1](/images/"Screenshot from 2020-08-12 11-02-00.png")
+![Pic1](/images/1.png)
 **Job1 :** 
   Pull  the Github repo automatically when some developers push repo to Github.
 **Job2 :**
